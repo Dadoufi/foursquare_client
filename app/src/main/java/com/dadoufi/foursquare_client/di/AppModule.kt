@@ -5,6 +5,8 @@ import androidx.room.Room
 import com.dadoufi.foursquare_client.data.local.AppDatabase
 import com.dadoufi.foursquare_client.data.remote.ApiInterceptor
 import com.dadoufi.foursquare_client.data.remote.WebService
+import com.dadoufi.foursquare_client.utils.ConnectivityStateManager
+import com.dadoufi.foursquare_client.utils.ConnectivityStateManagerImpl
 import com.dadoufi.foursquare_client.utils.Constants.BASE_URL
 import com.dadoufi.foursquare_client.utils.Constants.DATABASE_NAME
 import com.google.gson.GsonBuilder
@@ -35,7 +37,11 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideDatabase(db: AppDatabase) = db.venuesDao()
+    fun provideVenuesDao(db: AppDatabase) = db.venuesDao()
+
+    @Singleton
+    @Provides
+    fun provideVenueDetailsDao(db: AppDatabase) = db.venueDetailsDao()
 
     @Singleton
     @Provides
@@ -57,5 +63,10 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideWebService(retrofit:Retrofit) = retrofit.create(WebService::class.java)
+    fun provideWebService(retrofit: Retrofit) = retrofit.create(WebService::class.java)
+
+    @Singleton
+    @Provides
+    fun provideNetworkState(@ApplicationContext context: Context): ConnectivityStateManager =
+        ConnectivityStateManagerImpl(context)
 }
