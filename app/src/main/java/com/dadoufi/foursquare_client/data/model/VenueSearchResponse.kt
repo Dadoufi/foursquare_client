@@ -21,24 +21,11 @@ data class VenuesItem(
 	@field:SerializedName("name")
 	val name: String,
 
-	@field:SerializedName("verified")
-	val verified: Boolean,
-
 	@field:SerializedName("location")
 	val location: Location,
 
 	@field:SerializedName("id")
 	val id: String,
-
-	@field:SerializedName("venuePage")
-	val venuePage: VenuePage
-) : Parcelable
-
-@Parcelize
-data class VenuePage(
-
-	@field:SerializedName("id")
-	val id: String
 ) : Parcelable
 
 @Parcelize
@@ -53,5 +40,5 @@ data class Response(
 
 
 fun List<VenuesItem>.asVenuesEntity(query: String): List<VenuesEntity> = this.map {
-	VenuesEntity(it.id, "amsterdam", query)
+    VenuesEntity(it.id, it.name, it.location.formattedAddress, query)
 }

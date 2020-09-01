@@ -12,15 +12,6 @@ data class VenueDetailResponse(
 	val response: DetailResponse
 )
 
-data class Likes(
-
-	@field:SerializedName("summary")
-	val summary: String,
-
-	@field:SerializedName("count")
-	val count: Int,
-)
-
 data class Venue(
 
 	@field:SerializedName("shortUrl")
@@ -41,9 +32,6 @@ data class Venue(
 	@field:SerializedName("id")
 	val id: String,
 
-	@field:SerializedName("likes")
-	val likes: Likes,
-
 	@field:SerializedName("bestPhoto")
 	val bestPhoto: BestPhoto,
 
@@ -51,9 +39,8 @@ data class Venue(
 	val name: String,
 
 	@field:SerializedName("location")
-	val location: Location,
-
-	)
+	val location: Location
+)
 
 data class DetailResponse(
 
@@ -86,5 +73,12 @@ data class BestPhoto(
 )
 
 fun Venue.asVenueDetailsEntity(): VenueDetailsEntity =
-	VenueDetailsEntity(venueId = id)
+	VenueDetailsEntity(
+		venueId = id,
+		title = name,
+		description = description,
+		address = location.formattedAddress,
+		contactInfo = contact,
+		rating = rating
+	)
 

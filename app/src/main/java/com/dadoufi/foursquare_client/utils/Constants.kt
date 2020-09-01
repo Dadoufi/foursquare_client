@@ -11,4 +11,6 @@ object Constants {
 
     //ROOM
     const val DATABASE_NAME = "foursquare_database"
+
+    const val DEFAULT_SEARCH_LOCATION = "amsterdam"
 }
