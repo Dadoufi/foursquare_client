@@ -1,4 +1,4 @@
-package com.dadoufi.foursquare_client.search
+package com.dadoufi.foursquare_client.ui.search
 
 import android.util.Log
 import androidx.hilt.Assisted

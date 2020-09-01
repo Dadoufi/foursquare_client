@@ -13,7 +13,7 @@ import com.dadoufi.foursquare_client.data.local.entities.VenuesEntity
     version = 1,
     exportSchema = false
 )
-@TypeConverters(ListStringConverter::class)
+@TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun venuesDao(): VenuesDao
 

@@ -27,4 +27,5 @@ abstract class ActivityRetainedModule {
     @ExperimentalCoroutinesApi
     @Binds
     abstract fun venuesRepository(repository: VenuesRepositoryImp): VenuesRepository
+
 }

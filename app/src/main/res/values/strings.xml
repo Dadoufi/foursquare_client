@@ -2,4 +2,6 @@
     <string name="app_name">simple-foursquare_client</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_venues_found">No venues found</string>
+    <string name="opps_something_went_wrong">Opps something went wrong</string>
 </resources>
