@@ -8,38 +8,45 @@ import com.dadoufi.foursquare_client.core.ResultWrapper
 import com.dadoufi.foursquare_client.data.repositories.VenuesRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onStart
 
+@FlowPreview
 @ExperimentalCoroutinesApi
 class SearchViewModel @ViewModelInject constructor(
     private val repository: VenuesRepository,
     @Assisted private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
-    private val queryName =
-        savedStateHandle.getLiveData("cocktailName", "tacos")
-
-//    private val _viewState: MutableLiveData<SearchViewState> = MutableLiveData()
-//    val viewState: LiveData<SearchViewState>
-//        get() = _viewState
+    private val searchQuery =
+        savedStateHandle.getLiveData("query", "")
 
 
     val viewState: LiveData<SearchViewState> =
-        queryName.distinctUntilChanged().switchMap { query ->
+        searchQuery.distinctUntilChanged().switchMap { query ->
             liveData(viewModelScope.coroutineContext + Dispatchers.IO) {
-                repository.getVenues("pizza")
-                    .onStart { emit(SearchViewState.Loading) }
-                    .collect {
-                        if (it is ResultWrapper.Success) {
-                            emit(SearchViewState.VenuesLoaded(it.data))
-                        } else if (it is ResultWrapper.Error) {
-                            emit(SearchViewState.VenuesLoadedError(it.throwable.message))
+                if (query.isEmpty()) {
+                    emit(SearchViewState.VenuesLoaded())
+                } else {
+                    repository.getVenues(query)
+                        .onStart { emit(SearchViewState.Loading) }
+                        .collect {
+                            if (it is ResultWrapper.Success) {
+                                emit(SearchViewState.VenuesLoaded(it.data))
+                            } else if (it is ResultWrapper.Error) {
+                                emit(SearchViewState.VenuesLoadedError(it.throwable.message))
+                            }
+
+                            Log.d("asd", it.toString())
+
                         }
+                }
 
-                        Log.d("asd", it.toString())
-
-                    }
             }
         }
+
+    fun setQuery(query: String) {
+        searchQuery.value = query
+    }
 }

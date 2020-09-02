@@ -9,10 +9,13 @@ import com.dadoufi.foursquare_client.R
 import com.dadoufi.foursquare_client.data.local.entities.VenuesEntity
 import com.dadoufi.foursquare_client.databinding.FragmentSearchBinding
 import com.dadoufi.foursquare_client.utils.observeK
+import com.dadoufi.foursquare_client.utils.onQueryTextChanged
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.FlowPreview
 import javax.inject.Inject
 
+@FlowPreview
 @ExperimentalCoroutinesApi
 @AndroidEntryPoint
 class SearchFragment : Fragment(R.layout.fragment_search) {
@@ -35,6 +38,10 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
 
             }
             setController(searchController)
+        }
+
+        binding.searchView.onQueryTextChanged {
+            viewModel.setQuery(it)
         }
 
         viewModel.viewState.observeK(this) {

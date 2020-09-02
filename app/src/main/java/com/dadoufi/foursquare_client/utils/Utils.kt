@@ -2,8 +2,8 @@ package com.dadoufi.foursquare_client.utils
 
 import android.content.Context
 import android.view.View
-import android.widget.SearchView
 import android.widget.Toast
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 
 inline fun SearchView.onQueryTextChanged(crossinline onQueryTextChanged: (String) -> Unit) {

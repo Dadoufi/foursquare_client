@@ -26,7 +26,9 @@ class SearchController @Inject constructor() :
         when (viewState) {
             is SearchViewState.VenuesLoaded -> {
                 if (viewState.data.isNullOrEmpty()) {
-                    empty { id("empty") }
+                    empty {
+                        id("empty")
+                    }
                 }
 
                 viewState.data?.forEach {
