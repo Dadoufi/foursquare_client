@@ -6,13 +6,14 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.dadoufi.foursquare_client.R
-import com.dadoufi.foursquare_client.core.ResultWrapper
 import com.dadoufi.foursquare_client.data.local.entities.VenuesEntity
 import com.dadoufi.foursquare_client.databinding.FragmentSearchBinding
 import com.dadoufi.foursquare_client.utils.observeK
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import javax.inject.Inject
 
+@ExperimentalCoroutinesApi
 @AndroidEntryPoint
 class SearchFragment : Fragment(R.layout.fragment_search) {
 
@@ -36,20 +37,9 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
             setController(searchController)
         }
 
-        viewModel.venuesList.observeK(this) {
-            when (it) {
-                is ResultWrapper.Success -> {
-                    searchController.isError = false
-                    searchController.isLoading = false
-                    searchController.setData(it.data)
-                }
-                is ResultWrapper.Error -> {
-                    searchController.isLoading = false
-                    searchController.isError = false
-                }
-            }
+        viewModel.viewState.observeK(this) {
+            searchController.setData(it)
         }
-
     }
 
 

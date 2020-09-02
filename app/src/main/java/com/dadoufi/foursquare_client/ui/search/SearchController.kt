@@ -3,57 +3,50 @@ package com.dadoufi.foursquare_client.ui.search
 import com.airbnb.epoxy.TypedEpoxyController
 import com.dadoufi.foursquare_client.data.local.entities.VenuesEntity
 import com.dadoufi.foursquare_client.empty
+import com.dadoufi.foursquare_client.error
 import com.dadoufi.foursquare_client.loading
 import com.dadoufi.foursquare_client.venue
 import javax.inject.Inject
 
 
 class SearchController @Inject constructor() :
-    TypedEpoxyController<List<VenuesEntity>>() {
+    TypedEpoxyController<SearchViewState>() {
     var callbacks: Callbacks? = null
-
-    var isLoading = false
-        set(value) {
-            if (value != field) {
-                field = value
-                requestDelayedModelBuild(500)
-            }
-        }
-
-    fun toggleLoading(isLoading: Boolean) {
-        this.isLoading = isLoading
-    }
-
-    var isError = false
-        set(value) {
-            if (value != field) {
-                field = value
-                requestDelayedModelBuild(500)
-            }
-        }
 
 
     init {
         isDebugLoggingEnabled = true
     }
 
-    override fun buildModels(data: List<VenuesEntity>?) {
-        if (isLoading) {
-            loading {
-                id("loading")
+    interface Callbacks {
+        fun onItemClicked(item: VenuesEntity)
+    }
+
+    override fun buildModels(viewState: SearchViewState?) {
+        when (viewState) {
+            is SearchViewState.VenuesLoaded -> {
+                if (viewState.data.isNullOrEmpty()) {
+                    empty { id("empty") }
+                }
+
+                viewState.data?.forEach {
+                    venue {
+                        id(it.hashCode())
+                        venue(it)
+                        onClick { model, _, _, _ ->
+                            callbacks?.onItemClicked(model.venue())
+                        }
+                    }
+                }
             }
-        }
-
-        if (data.isNullOrEmpty()) {
-            empty { id("empty") }
-        }
-
-        data?.forEach {
-            venue {
-                id(it.hashCode())
-                venue(it)
-                onClick { model, _, _, _ ->
-                    callbacks?.onItemClicked(model.venue())
+            is SearchViewState.VenuesLoadedError -> {
+                error {
+                    id("error")
+                }
+            }
+            is SearchViewState.Loading -> {
+                loading {
+                    id("loading")
                 }
             }
         }
@@ -61,11 +54,6 @@ class SearchController @Inject constructor() :
 
     override fun onExceptionSwallowed(exception: RuntimeException) {
         throw exception
-    }
-
-
-    interface Callbacks {
-        fun onItemClicked(item: VenuesEntity)
     }
 
 
