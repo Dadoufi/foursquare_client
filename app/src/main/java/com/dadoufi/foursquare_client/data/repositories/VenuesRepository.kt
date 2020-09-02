@@ -20,7 +20,7 @@ import javax.inject.Inject
 interface VenuesRepository : Repository {
     suspend fun getVenues(query: String): Flow<ResultWrapper<List<VenuesEntity>>>
 
-    suspend fun fetchVenueDetails(venueId: String): Flow<ResultWrapper<VenueDetailsEntity>>
+    suspend fun getVenueDetail(venueId: String): Flow<ResultWrapper<VenueDetailsEntity>>
 }
 
 @ExperimentalCoroutinesApi
@@ -55,7 +55,7 @@ class VenuesRepositoryImp
         }
 
 
-    override suspend fun fetchVenueDetails(venueId: String): Flow<ResultWrapper<VenueDetailsEntity>> =
+    override suspend fun getVenueDetail(venueId: String): Flow<ResultWrapper<VenueDetailsEntity>> =
         callbackFlow {
 
             try {
