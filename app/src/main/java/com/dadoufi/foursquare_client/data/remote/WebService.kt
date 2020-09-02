@@ -3,6 +3,7 @@ package com.dadoufi.foursquare_client.data.remote
 import com.dadoufi.foursquare_client.data.model.VenueDetailResponse
 import com.dadoufi.foursquare_client.data.model.VenueSearchResponse
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 
@@ -16,8 +17,8 @@ interface WebService {
         @Query(value = "query") query: String
     ): VenueSearchResponse
 
-    @GET("venues/details")
+    @GET("venues/{VENUE_ID}")
     suspend fun getVenueDetails(
-        @Query(value = "VENUE_ID") venueId: String
+        @Path(value = "VENUE_ID") venueId: String
     ): VenueDetailResponse
 }

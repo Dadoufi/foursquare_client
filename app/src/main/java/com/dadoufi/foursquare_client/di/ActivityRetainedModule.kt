@@ -5,7 +5,7 @@ import com.dadoufi.foursquare_client.data.local.LocalDataSourceImpl
 import com.dadoufi.foursquare_client.data.remote.NetworkDataSource
 import com.dadoufi.foursquare_client.data.remote.NetworkDataSourceImpl
 import com.dadoufi.foursquare_client.data.repositories.VenuesRepository
-import com.dadoufi.foursquare_client.data.repositories.VenuesRepositoryImp
+import com.dadoufi.foursquare_client.data.repositories.VenuesRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -26,6 +26,6 @@ abstract class ActivityRetainedModule {
 
     @ExperimentalCoroutinesApi
     @Binds
-    abstract fun venuesRepository(repository: VenuesRepositoryImp): VenuesRepository
+    abstract fun venuesRepository(repository: VenuesRepositoryImpl): VenuesRepository
 
 }

@@ -21,7 +21,7 @@ data class Venue(
 	val rating: Double,
 
 	@field:SerializedName("description")
-	val description: String,
+	val description: String?,
 
 	@field:SerializedName("photos")
 	val photos: Photos,
@@ -76,7 +76,7 @@ fun Venue.asVenueDetailsEntity(): VenueDetailsEntity =
 	VenueDetailsEntity(
 		venueId = id,
 		title = name,
-		description = description,
+		description = description ?: "",
 		address = location.formattedAddress,
 		contactInfo = contact,
 		rating = rating

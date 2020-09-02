@@ -19,8 +19,12 @@ class DetailViewModel @ViewModelInject constructor(
     @Assisted private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
-    private val venueId =
-        savedStateHandle.getLiveData("venueId", "")
+    private val venueId: MutableLiveData<String> =
+        savedStateHandle.getLiveData("venueId")
+
+    init {
+
+    }
 
 
     val viewState: LiveData<DetailViewState> =

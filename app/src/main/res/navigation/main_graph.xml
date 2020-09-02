@@ -9,6 +9,24 @@
         android:id="@+id/mainFragment"
         android:name="com.dadoufi.foursquare_client.ui.search.SearchFragment"
         android:label="Cocktails"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_mainFragment_to_detailFragment"
+            app:destination="@id/detailFragment">
+
+            <argument
+                android:name="venueId"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.dadoufi.foursquare_client.ui.detail.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="venueId"
+            app:argType="string" />
+    </fragment>
 
 </navigation>

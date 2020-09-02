@@ -25,7 +25,7 @@ interface VenuesRepository : Repository {
 
 @ExperimentalCoroutinesApi
 @ActivityRetainedScoped
-class VenuesRepositoryImp
+class VenuesRepositoryImpl
 @Inject constructor(
     private val networkDataSource: NetworkDataSource,
     private val localDataSource: LocalDataSource,
@@ -34,7 +34,6 @@ class VenuesRepositoryImp
 
     override suspend fun getVenues(query: String): Flow<ResultWrapper<List<VenuesEntity>>> =
         callbackFlow {
-
             try {
                 if (!connectivityStateManager.isConnected()) {
                     offer(localDataSource.getStoredVenues(query))
@@ -50,14 +49,12 @@ class VenuesRepositoryImp
             } catch (e: Exception) {
                 offer(ResultWrapper.Error(e))
             }
-
             awaitClose { cancel() }
         }
 
 
     override suspend fun getVenueDetail(venueId: String): Flow<ResultWrapper<VenueDetailsEntity>> =
         callbackFlow {
-
             try {
                 if (!connectivityStateManager.isConnected()) {
                     offer(localDataSource.getStoredVenueDetails(venueId))
@@ -71,10 +68,8 @@ class VenuesRepositoryImp
                     }
                 }
             } catch (e: Exception) {
-
                 offer(ResultWrapper.Error(e))
             }
-
             awaitClose { cancel() }
         }
 }

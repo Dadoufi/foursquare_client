@@ -2,9 +2,9 @@ package com.dadoufi.foursquare_client.ui.search
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.dadoufi.foursquare_client.R
 import com.dadoufi.foursquare_client.data.local.entities.VenuesEntity
 import com.dadoufi.foursquare_client.databinding.FragmentSearchBinding
@@ -20,7 +20,7 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class SearchFragment : Fragment(R.layout.fragment_search) {
 
-    private val viewModel by activityViewModels<SearchViewModel>()
+    private val viewModel by viewModels<SearchViewModel>()
     private lateinit var binding: FragmentSearchBinding
 
     @Inject
@@ -33,21 +33,27 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
         binding.recyclerView.run {
             searchController.callbacks = object : SearchController.Callbacks {
                 override fun onItemClicked(item: VenuesEntity) {
-                    Toast.makeText(requireContext(), item.toString(), Toast.LENGTH_SHORT).show()
+                    findNavController().navigate(
+                        SearchFragmentDirections.actionMainFragmentToDetailFragment(item.venueId)
+                    )
                 }
-
             }
             setController(searchController)
         }
+
+        viewModel.viewState.observeK(requireActivity()) {
+            searchController.setData(it)
+        }
+
 
         binding.searchView.onQueryTextChanged {
             viewModel.setQuery(it)
         }
 
-        viewModel.viewState.observeK(this) {
-            searchController.setData(it)
-        }
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putString("query", binding.searchView.query.toString())
+    }
 
 }

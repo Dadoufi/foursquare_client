@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import com.dadoufi.foursquare_client.R
 import com.dadoufi.foursquare_client.data.local.entities.VenuesEntity
 import com.dadoufi.foursquare_client.databinding.FragmentDetailBinding
@@ -19,7 +19,7 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class DetailFragment : Fragment(R.layout.fragment_detail) {
 
-    private val viewModel by activityViewModels<DetailViewModel>()
+    private val viewModel by viewModels<DetailViewModel>()
     private lateinit var binding: FragmentDetailBinding
 
     @Inject
