@@ -20,7 +20,7 @@ class SearchViewModel @ViewModelInject constructor(
 ) : ViewModel() {
 
     private val searchQuery: MutableLiveData<String> =
-        savedStateHandle.getLiveData("query")
+        savedStateHandle.getLiveData("query", "pizza")
 
 
     val viewState: LiveData<SearchViewState> =
