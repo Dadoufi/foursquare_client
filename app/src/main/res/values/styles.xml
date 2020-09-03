@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
@@ -6,14 +6,13 @@
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
 
         <!--System/Platform attributes-->
-        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
-        <item name="android:statusBarColor">@color/transparentColor</item>
+        <!--        <item name="android:windowLightStatusBar">true</item>-->
+        <!--        <item name="android:statusBarColor">@color/transparentColor</item>-->
+        <!--        <item name="android:windowNoTitle">true</item>-->
+        <!--        <item name="android:navigationBarColor">@color/transparentColor</item>-->
+        <!--        <item name="android:windowTranslucentStatus">true</item>-->
+
     </style>
 
-
-    <!--    <style name="SearchViewStyle" parent="Widget.AppCompat.Light.SearchView">-->
-    <!--&lt;!&ndash;        <item name="backgroundColor">@color/</item>&ndash;&gt;-->
-    <!--        <item name="android:elevation">4dp</item>-->
-    <!--    </style>-->
 
 </resources>

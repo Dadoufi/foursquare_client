@@ -1,18 +1,19 @@
 package com.dadoufi.foursquare_client.ui.detail
 
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
+import android.util.TypedValue
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.dadoufi.foursquare_client.R
-import com.dadoufi.foursquare_client.data.local.entities.VenuesEntity
 import com.dadoufi.foursquare_client.databinding.FragmentDetailBinding
 import com.dadoufi.foursquare_client.utils.observeK
+import com.dadoufi.foursquare_client.utils.setMarginTop
 import dagger.hilt.android.AndroidEntryPoint
+import dev.chrisbanes.insetter.Insetter
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
-import javax.inject.Inject
 
 @FlowPreview
 @ExperimentalCoroutinesApi
@@ -22,25 +23,27 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
     private val viewModel by viewModels<DetailViewModel>()
     private lateinit var binding: FragmentDetailBinding
 
-    @Inject
-    lateinit var detailController: DetailController
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding = FragmentDetailBinding.bind(view)
-        binding.recyclerView.run {
-            detailController.callbacks = object : DetailController.Callbacks {
-                override fun onItemClicked(item: VenuesEntity) {
-                    Toast.makeText(requireContext(), item.toString(), Toast.LENGTH_SHORT).show()
-                }
 
+        binding = FragmentDetailBinding.bind(view)
+        binding.facebook.movementMethod = LinkMovementMethod.getInstance()
+        binding.run {
+            val tv = TypedValue()
+            if (requireActivity().theme.resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
+                TypedValue.complexToDimensionPixelSize(tv.data, resources.displayMetrics)
+                Insetter.builder().setOnApplyInsetsListener { view, insets, initialState ->
+                    toolbar.setMarginTop(insets.systemWindowInsetTop)
+                    statusBarGradientView.minimumHeight =
+                        insets.systemWindowInsetTop
+                }.applyToView(this.root)
             }
-            setController(detailController)
         }
 
         viewModel.viewState.observeK(this) {
-            detailController.setData(it)
+            binding.viewState = it
         }
     }
 

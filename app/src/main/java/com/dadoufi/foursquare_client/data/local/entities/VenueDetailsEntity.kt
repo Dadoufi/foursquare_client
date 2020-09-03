@@ -12,5 +12,6 @@ class VenueDetailsEntity(
     val description: String,
     val address: List<String>,
     val contactInfo: Contact,
-    val rating: Double
+    val rating: Double,
+    val image: String?
 )

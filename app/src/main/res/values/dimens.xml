@@ -5,5 +5,6 @@
     <dimen name="margin_large">32dp</dimen>
     <dimen name="margin_very_large">64dp</dimen>
     <dimen name="margin_very_small">4dp</dimen>
+    <dimen name="error_image_size">108dp</dimen>
 
 </resources>

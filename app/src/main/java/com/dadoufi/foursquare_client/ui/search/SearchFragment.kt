@@ -10,7 +10,9 @@ import com.dadoufi.foursquare_client.data.local.entities.VenuesEntity
 import com.dadoufi.foursquare_client.databinding.FragmentSearchBinding
 import com.dadoufi.foursquare_client.utils.observeK
 import com.dadoufi.foursquare_client.utils.onQueryTextChanged
+import com.dadoufi.foursquare_client.utils.setMarginTop
 import dagger.hilt.android.AndroidEntryPoint
+import dev.chrisbanes.insetter.Insetter
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import javax.inject.Inject
@@ -39,6 +41,11 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
                 }
             }
             setController(searchController)
+        }
+        binding.run {
+            Insetter.builder().setOnApplyInsetsListener { view, insets, initialState ->
+                searchAppbar.setMarginTop(insets.systemWindowInsetTop)
+            }
         }
 
         viewModel.viewState.observeK(requireActivity()) {

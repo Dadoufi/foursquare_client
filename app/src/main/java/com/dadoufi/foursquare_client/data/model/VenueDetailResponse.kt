@@ -33,7 +33,7 @@ data class Venue(
 	val id: String,
 
 	@field:SerializedName("bestPhoto")
-	val bestPhoto: BestPhoto,
+	val bestPhoto: BestPhoto?,
 
 	@field:SerializedName("name")
 	val name: String,
@@ -50,12 +50,6 @@ data class DetailResponse(
 
 data class BestPhoto(
 
-	@field:SerializedName("createdAt")
-	val createdAt: Int,
-
-	@field:SerializedName("visibility")
-	val visibility: String,
-
 	@field:SerializedName("prefix")
 	val prefix: String,
 
@@ -69,7 +63,9 @@ data class BestPhoto(
 	val suffix: String,
 
 	@field:SerializedName("height")
-	val height: Int? = null
+	val height: Int
+
+
 )
 
 fun Venue.asVenueDetailsEntity(): VenueDetailsEntity =
@@ -79,6 +75,15 @@ fun Venue.asVenueDetailsEntity(): VenueDetailsEntity =
 		description = description ?: "",
 		address = location.formattedAddress,
 		contactInfo = contact,
-		rating = rating
+		rating = rating,
+		image = bestPhoto.createUrl()
+
 	)
+
+fun BestPhoto?.createUrl(): String? {
+	this?.let {
+		return prefix.plus("cap").plus("720").plus(suffix)
+	}
+	return null
+}
 

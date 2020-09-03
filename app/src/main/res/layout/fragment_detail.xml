@@ -1,24 +1,214 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    <data>
+
+        <variable
+            name="viewState"
+            type="com.dadoufi.foursquare_client.ui.detail.DetailViewState" />
+
+        <import type="android.text.TextUtils" />
+
+        <import type="com.dadoufi.foursquare_client.data.model.SocialType" />
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/parentView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/design_default_color_background"
+        app:statusBarBackground="@color/transparentColor"
         tools:context=".ui.detail.DetailFragment">
 
 
-        <com.airbnb.epoxy.EpoxyRecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            android:paddingHorizontal="@dimen/margin_normal"
+        <TextView
+            android:id="@+id/errorView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            app:showOnError="@{viewState}" />
+
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:showOnLoading="@{viewState}" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparentColor"
+            app:elevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="0dp"
+                app:contentScrim="@color/primaryColor"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:statusBarScrim="@color/primaryDarkColor"
+                app:title='@{viewState.data.title ?? ""}'>
+
+                <ImageView
+                    android:id="@+id/poster"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/poster"
+                    android:foreground="@drawable/bg_detail_app_bar_gradient"
+                    android:minHeight="320dp"
+                    android:scaleType="centerCrop"
+                    app:imageUrl="@{viewState.data}"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier=".85" />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:elevation="0dp"
+                    android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
+                    app:layout_collapseMode="pin" />
+
+                <View
+                    android:id="@+id/statusBarGradientView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_status_bar_gradient"
+                    app:layout_collapseMode="pin" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/default_funda_toolbar"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/contentView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/margin_normal"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:text='@{viewState.data.description}'
+                    app:hideIf="@{TextUtils.isEmpty(viewState.data.description)}"
+                    app:layout_constraintEnd_toStartOf="@+id/rating"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="This is a Cool description" />
+
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center_vertical"
+                    android:text='@{Double.toString(viewState.data.rating) ?? ""}'
+                    app:drawableEndCompat="@drawable/ic_star"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/description"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="8.5" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rating"
+                    app:showIf="@{viewState.data.address != null}"
+                    app:spannable='@{viewState.data.address}' />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:autoLink="phone"
+                    android:text='@{viewState.data.contactInfo.formattedPhone}'
+                    app:layout_constraintEnd_toStartOf="@+id/facebook"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/address"
+                    app:showIf="@{viewState.data.contactInfo.formattedPhone != null}"
+                    tools:text="phone" />
+
+                <TextView
+                    android:id="@+id/facebook"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toStartOf="@+id/instagram"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/phone"
+                    app:layout_constraintTop_toTopOf="@+id/phone"
+                    app:showIf="@{viewState.data.contactInfo.facebook != null}"
+                    app:socialText='@{viewState.data.contactInfo}'
+                    app:socialType="@{SocialType.FACEBOOK}" />
+
+                <TextView
+                    android:id="@+id/instagram"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toStartOf="@+id/twitter"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/facebook"
+                    app:layout_constraintTop_toTopOf="@+id/phone"
+                    app:showIf="@{viewState.data.contactInfo.instagram != null}"
+                    app:socialText='@{viewState.data.contactInfo}'
+                    app:socialType="@{SocialType.INSTAGRAM}"
+                    tools:text="instagram" />
+
+                <TextView
+                    android:id="@+id/twitter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/instagram"
+                    app:layout_constraintTop_toTopOf="@+id/phone"
+                    app:showIf="@{viewState.data.contactInfo.twitter != null}"
+                    app:socialText='@{viewState.data.contactInfo}'
+                    app:socialType="@{SocialType.TWITTER}"
+
+                    tools:text="twitter" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </layout>
