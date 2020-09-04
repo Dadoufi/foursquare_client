@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 import com.dadoufi.foursquare_client.data.model.Contact
 
 @Entity(tableName = "venue_details")
-class VenueDetailsEntity(
+data class VenueDetailsEntity(
     @PrimaryKey
     val venueId: String,
     val title: String,
