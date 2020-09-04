@@ -14,9 +14,6 @@ data class VenueDetailResponse(
 
 data class Venue(
 
-	@field:SerializedName("shortUrl")
-	val shortUrl: String,
-
 	@field:SerializedName("rating")
 	val rating: Double,
 

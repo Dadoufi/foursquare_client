@@ -1,5 +1,3 @@
-@file:Suppress("SpellCheckingInspection")
-
 package com.dadoufi.foursquare_client
 
 import kotlinx.coroutines.Dispatchers
