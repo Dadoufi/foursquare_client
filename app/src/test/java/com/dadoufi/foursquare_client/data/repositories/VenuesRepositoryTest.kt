@@ -1,10 +1,7 @@
 package com.dadoufi.foursquare_client.data.repositories
 
-import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import app.cash.turbine.test
 import com.dadoufi.foursquare_client.MainCoroutinesRule
-import com.dadoufi.foursquare_client.SharedTestData.venueDetailResponseTestData
-import com.dadoufi.foursquare_client.SharedTestData.venueSearchResponseTestData
 import com.dadoufi.foursquare_client.core.ResultWrapper
 import com.dadoufi.foursquare_client.data.local.LocalDataSource
 import com.dadoufi.foursquare_client.data.model.asVenueDetailsEntity
@@ -19,6 +16,8 @@ import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
+import testshared.SharedTestData.venueDetailResponseTestData
+import testshared.SharedTestData.venueSearchResponseTestData
 
 class VenuesRepositoryTest {
 
@@ -31,9 +30,6 @@ class VenuesRepositoryTest {
     @ExperimentalCoroutinesApi
     @get:Rule
     var coroutinesRule = MainCoroutinesRule()
-
-    @get:Rule
-    var instantExecutorRule = InstantTaskExecutorRule()
 
     @ExperimentalCoroutinesApi
     @Before
@@ -127,7 +123,7 @@ class VenuesRepositoryTest {
     }
 
     @Test
-    fun `test fetching venue details from network failure`(): Unit = runBlockingTest {
+    fun `test fetching venue details from network failure`() = runBlockingTest {
         val query = "query"
         whenever(connectivityStateManager.isConnected()).doReturn(true)
         val error = RuntimeException("ooops!")

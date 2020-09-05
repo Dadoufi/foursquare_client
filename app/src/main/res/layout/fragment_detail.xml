@@ -173,7 +173,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toEndOf="@+id/phone"
                     app:layout_constraintTop_toTopOf="@+id/phone"
-                    app:showIf="@{viewState.data.contactInfo.facebook != null}"
+                    app:showIf="@{viewState.data.contactInfo.facebookUsername != null}"
                     app:socialText='@{viewState.data.contactInfo}'
                     app:socialType="@{SocialType.FACEBOOK}" />
 

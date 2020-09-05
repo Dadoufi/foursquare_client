@@ -1,0 +1,645 @@
+{
+  "meta": {
+    "code": 200,
+    "requestId": "5f51ff8ab52da7221b186ece"
+  },
+  "response": {
+    "venue": {
+      "id": "4a27db7bf964a52016941fe3",
+      "name": "New York Pizza",
+      "contact": {
+        "phone": "+31204222123",
+        "formattedPhone": "+31 20 422 2123",
+        "twitter": "new_york_pizza",
+        "instagram": "newyorkpizza_nl"
+      },
+      "location": {
+        "address": "Damstraat 24",
+        "lat": 52.3721766271115,
+        "lng": 4.894925398813328,
+        "labeledLatLngs": [
+          {
+            "label": "display",
+            "lat": 52.3721766271115,
+            "lng": 4.894925398813328
+          }
+        ],
+        "postalCode": "1012 JM",
+        "cc": "NL",
+        "city": "Amsterdam",
+        "state": "Noord-Holland",
+        "country": "Nederland",
+        "formattedAddress": [
+          "Damstraat 24",
+          "1012 JM Amsterdam",
+          "Nederland"
+        ]
+      },
+      "canonicalUrl": "https://foursquare.com/v/new-york-pizza/4a27db7bf964a52016941fe3",
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d1ca941735",
+          "name": "Pizza Place",
+          "pluralName": "Pizza Places",
+          "shortName": "Pizza",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/pizza_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": true,
+      "stats": {
+        "tipCount": 15
+      },
+      "url": "https://www.newyorkpizza.nl",
+      "price": {
+        "tier": 1,
+        "message": "Cheap",
+        "currency": "€"
+      },
+      "likes": {
+        "count": 55,
+        "groups": [
+          {
+            "type": "others",
+            "count": 55,
+            "items": []
+          }
+        ],
+        "summary": "55 Likes"
+      },
+      "dislike": false,
+      "ok": false,
+      "rating": 6.6,
+      "ratingColor": "FFC800",
+      "ratingSignals": 90,
+      "allowMenuUrlEdit": true,
+      "beenHere": {
+        "count": 0,
+        "unconfirmedCount": 0,
+        "marked": false,
+        "lastCheckinExpiredAt": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "photos": {
+        "count": 44,
+        "groups": [
+          {
+            "type": "venue",
+            "name": "Venue photos",
+            "count": 44,
+            "items": [
+              {
+                "id": "5db9db65fa06e10008a9e6c4",
+                "createdAt": 1572461413,
+                "source": {
+                  "name": "Swarm for iOS",
+                  "url": "https://www.swarmapp.com"
+                },
+                "prefix": "https://fastly.4sqi.net/img/general/",
+                "suffix": "/77182479_BLUvlCvvRkrDEa5OWtcceib0TCqJtG27euDmlRBgv3k.jpg",
+                "width": 1440,
+                "height": 1920,
+                "user": {
+                  "id": "77182479",
+                  "firstName": "Hassan",
+                  "lastName": "Q",
+                  "photo": {
+                    "prefix": "https://fastly.4sqi.net/img/user/",
+                    "suffix": "/77182479-1GNNXN2FOVUOZFMH.jpg"
+                  }
+                },
+                "visibility": "public"
+              }
+            ]
+          }
+        ]
+      },
+      "venuePage": {
+        "id": "554919369"
+      },
+      "reasons": {
+        "count": 1,
+        "items": [
+          {
+            "summary": "Lots of people like this place",
+            "type": "general",
+            "reasonName": "rawLikesReason"
+          }
+        ]
+      },
+      "description": "New York Pizza is al sinds de oprichting in 1993 dé smaakmaker van Nederland",
+      "page": {
+        "user": {
+          "id": "554919369",
+          "firstName": "New York Pizza",
+          "photo": {
+            "prefix": "https://fastly.4sqi.net/img/user/",
+            "suffix": "/554919369_8MI9562U_Upz70QVbp5bPYpH2DQZCwY89GMXrlqVkKFnz-HhO4pYNKn6HOc0_6Yt4-tjTY3-q.png"
+          },
+          "type": "venuePage",
+          "venue": {
+            "id": "4a27db7bf964a52016941fe3"
+          },
+          "tips": {
+            "count": 0
+          },
+          "lists": {
+            "groups": [
+              {
+                "type": "created",
+                "count": 2,
+                "items": []
+              }
+            ]
+          },
+          "bio": ""
+        }
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "createdAt": 1244126075,
+      "tips": {
+        "count": 15,
+        "groups": [
+          {
+            "type": "others",
+            "name": "All tips",
+            "count": 15,
+            "items": [
+              {
+                "id": "50a81d7fe4b09f72f2e5894a",
+                "createdAt": 1353194879,
+                "text": "A must try 4 cheese pizza",
+                "type": "user",
+                "canonicalUrl": "https://foursquare.com/item/50a81d7fe4b09f72f2e5894a",
+                "lang": "en",
+                "likes": {
+                  "count": 1,
+                  "groups": [
+                    {
+                      "type": "others",
+                      "count": 1,
+                      "items": [
+                        {
+                          "id": "48538730",
+                          "firstName": "Ameer Thwaha",
+                          "lastName": "K",
+                          "photo": {
+                            "prefix": "https://fastly.4sqi.net/img/user/",
+                            "suffix": "/LQHPICSMIZA54HUO.jpg"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "summary": "1 like"
+                },
+                "logView": true,
+                "agreeCount": 1,
+                "disagreeCount": 0,
+                "todo": {
+                  "count": 0
+                },
+                "user": {
+                  "id": "13798092",
+                  "firstName": "Ahmed",
+                  "lastName": "M",
+                  "photo": {
+                    "prefix": "https://fastly.4sqi.net/img/user/",
+                    "suffix": "/S5DVAV5UBRIGBQJ2.jpg"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "shortUrl": "http://4sq.com/cqu3Zv",
+      "timeZone": "Europe/Amsterdam",
+      "listed": {
+        "count": 13,
+        "groups": [
+          {
+            "type": "others",
+            "name": "Lists from other people",
+            "count": 13,
+            "items": [
+              {
+                "id": "4ea538d8c2eefedd04517e50",
+                "name": "Guide to Amsterdam's best spots",
+                "description": "",
+                "type": "others",
+                "user": {
+                  "id": "6159128",
+                  "firstName": "Bada",
+                  "lastName": "L",
+                  "photo": {
+                    "prefix": "https://fastly.4sqi.net/img/user/",
+                    "suffix": "/ONRYWEKUYJ3IWK0E.jpg"
+                  }
+                },
+                "editable": false,
+                "public": true,
+                "collaborative": false,
+                "url": "/user/6159128/list/guide-to-amsterdams-best-spots",
+                "canonicalUrl": "https://foursquare.com/user/6159128/list/guide-to-amsterdams-best-spots",
+                "createdAt": 1319450840,
+                "updatedAt": 1319450840,
+                "followers": {
+                  "count": 3
+                },
+                "listItems": {
+                  "count": 18,
+                  "items": [
+                    {
+                      "id": "v4a27db7bf964a52016941fe3",
+                      "createdAt": 1319450840
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "5e30b4bbcd1611000b43649d",
+                "name": "Amsterdam",
+                "description": "",
+                "type": "others",
+                "user": {
+                  "id": "56790101",
+                  "firstName": "Munira",
+                  "photo": {
+                    "prefix": "https://fastly.4sqi.net/img/user/",
+                    "suffix": "/56790101_aQ-bxnFk_qT0zmUW0osb16iDSTeOYZZRo08VbZwlIybx0Htmob7akd3WNqbOLEnIf1MkX3K74.jpg"
+                  }
+                },
+                "editable": false,
+                "public": true,
+                "collaborative": false,
+                "url": "/user/56790101/list/amsterdam",
+                "canonicalUrl": "https://foursquare.com/user/56790101/list/amsterdam",
+                "createdAt": 1580250299,
+                "updatedAt": 1582848274,
+                "photo": {
+                  "id": "5dfb9f8381defe00081b04ae",
+                  "createdAt": 1576771459,
+                  "prefix": "https://fastly.4sqi.net/img/general/",
+                  "suffix": "/11822003_3r65o0pPQnEAk_1FKDLabCii28jgDr6aElzxnoM1Ozk.jpg",
+                  "width": 1440,
+                  "height": 1920,
+                  "user": {
+                    "id": "11822003",
+                    "firstName": "Ronald",
+                    "lastName": "S",
+                    "photo": {
+                      "prefix": "https://fastly.4sqi.net/img/user/",
+                      "suffix": "/11822003_S6XpVgTZ_DTRdjySueBfW46xH0dqNnPCdkI_wauuMpLxFtFJwhvsCNQgIczmtFaIsyO8LauB8.jpg"
+                    }
+                  },
+                  "visibility": "public"
+                },
+                "followers": {
+                  "count": 0
+                },
+                "listItems": {
+                  "count": 67,
+                  "items": [
+                    {
+                      "id": "v4a27db7bf964a52016941fe3",
+                      "createdAt": 1582848274
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "5d837b3748ef1a0008c5fc36",
+                "name": "Amsterdam",
+                "description": "",
+                "type": "others",
+                "user": {
+                  "id": "559004823",
+                  "firstName": "Aysu",
+                  "lastName": "Y",
+                  "photo": {
+                    "prefix": "https://fastly.4sqi.net/img/user/",
+                    "suffix": "/559004823_DV7ImvHb_j1bXwKBR85cAC2nN0t_ycKuS0ywPZfo91HmTkNr44IxaPdHKi1b1ccoW4KRJNvWg.jpg"
+                  }
+                },
+                "editable": false,
+                "public": true,
+                "collaborative": false,
+                "url": "/user/559004823/list/amsterdam",
+                "canonicalUrl": "https://foursquare.com/user/559004823/list/amsterdam",
+                "createdAt": 1568897847,
+                "updatedAt": 1568898011,
+                "followers": {
+                  "count": 1
+                },
+                "listItems": {
+                  "count": 20,
+                  "items": [
+                    {
+                      "id": "v4a27db7bf964a52016941fe3",
+                      "createdAt": 1568897881
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "5b7542b73c858d002ce07c88",
+                "name": "Amsterdam",
+                "description": "",
+                "type": "others",
+                "user": {
+                  "id": "207313794",
+                  "firstName": "Kathy",
+                  "lastName": "J",
+                  "photo": {
+                    "prefix": "https://fastly.4sqi.net/img/user/",
+                    "suffix": "/blank_girl.png",
+                    "default": true
+                  }
+                },
+                "editable": false,
+                "public": true,
+                "collaborative": true,
+                "url": "/user/207313794/list/amsterdam",
+                "canonicalUrl": "https://foursquare.com/user/207313794/list/amsterdam",
+                "createdAt": 1534411447,
+                "updatedAt": 1534666970,
+                "followers": {
+                  "count": 1
+                },
+                "listItems": {
+                  "count": 17,
+                  "items": [
+                    {
+                      "id": "v4a27db7bf964a52016941fe3",
+                      "createdAt": 1534476039
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "hours": {
+        "status": "Closed until 11:00 AM",
+        "richStatus": {
+          "entities": [],
+          "text": "Closed until 11:00 AM"
+        },
+        "isOpen": false,
+        "isLocalHoliday": false,
+        "dayData": [],
+        "timeframes": [
+          {
+            "days": "Mon–Sun",
+            "includesToday": true,
+            "open": [
+              {
+                "renderedTime": "11:00 AM–7:00 PM"
+              }
+            ],
+            "segments": []
+          }
+        ]
+      },
+      "popular": {
+        "isOpen": false,
+        "isLocalHoliday": false,
+        "timeframes": [
+          {
+            "days": "Today",
+            "includesToday": true,
+            "open": [
+              {
+                "renderedTime": "Noon–1:00 AM"
+              }
+            ],
+            "segments": []
+          },
+          {
+            "days": "Sat",
+            "open": [
+              {
+                "renderedTime": "Noon–2:00 AM"
+              }
+            ],
+            "segments": []
+          },
+          {
+            "days": "Sun",
+            "open": [
+              {
+                "renderedTime": "Noon–Midnight"
+              }
+            ],
+            "segments": []
+          },
+          {
+            "days": "Mon",
+            "open": [
+              {
+                "renderedTime": "3:00 PM–2:00 AM"
+              }
+            ],
+            "segments": []
+          },
+          {
+            "days": "Tue",
+            "open": [
+              {
+                "renderedTime": "9:00 AM–10:00 AM"
+              },
+              {
+                "renderedTime": "Noon–1:00 AM"
+              }
+            ],
+            "segments": []
+          },
+          {
+            "days": "Wed",
+            "open": [
+              {
+                "renderedTime": "2:00 PM–Midnight"
+              }
+            ],
+            "segments": []
+          },
+          {
+            "days": "Thu",
+            "open": [
+              {
+                "renderedTime": "Noon–1:00 PM"
+              },
+              {
+                "renderedTime": "3:00 PM–11:00 PM"
+              }
+            ],
+            "segments": []
+          }
+        ]
+      },
+      "seasonalHours": [
+        {
+          "seasonalRange": "May 21–May 31",
+          "closed": true,
+          "timeframes": [
+            {
+              "days": "Mon–Sun",
+              "open": [],
+              "segments": [
+                {
+                  "renderedTime": "24 Hours",
+                  "label": "Mandatory Closures"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "defaultHours": {
+        "status": "Closed until 11:00 AM",
+        "richStatus": {
+          "entities": [],
+          "text": "Closed until 11:00 AM"
+        },
+        "isOpen": false,
+        "isLocalHoliday": false,
+        "dayData": [],
+        "timeframes": [
+          {
+            "days": "Mon–Sun",
+            "includesToday": true,
+            "open": [
+              {
+                "renderedTime": "11:00 AM–7:00 PM"
+              }
+            ],
+            "segments": []
+          }
+        ]
+      },
+      "pageUpdates": {
+        "count": 0,
+        "items": []
+      },
+      "inbox": {
+        "count": 0,
+        "items": []
+      },
+      "attributes": {
+        "groups": [
+          {
+            "type": "price",
+            "name": "Price",
+            "summary": "€",
+            "count": 1,
+            "items": [
+              {
+                "displayName": "Price",
+                "displayValue": "€",
+                "priceTier": 1
+              }
+            ]
+          },
+          {
+            "type": "reservations",
+            "name": "Reservations",
+            "count": 3,
+            "items": [
+              {
+                "displayName": "Reservations",
+                "displayValue": "No"
+              }
+            ]
+          },
+          {
+            "type": "payments",
+            "name": "Credit Cards",
+            "summary": "No Credit Cards",
+            "count": 5,
+            "items": [
+              {
+                "displayName": "Credit Cards",
+                "displayValue": "No"
+              }
+            ]
+          },
+          {
+            "type": "outdoorSeating",
+            "name": "Outdoor Seating",
+            "count": 1,
+            "items": [
+              {
+                "displayName": "Outdoor Seating",
+                "displayValue": "No"
+              }
+            ]
+          },
+          {
+            "type": "wifi",
+            "name": "Wi-Fi",
+            "summary": "Wi-Fi",
+            "count": 1,
+            "items": [
+              {
+                "displayName": "Wi-Fi",
+                "displayValue": "Yes"
+              }
+            ]
+          },
+          {
+            "type": "serves",
+            "name": "Menus",
+            "summary": "Brunch & Dinner",
+            "count": 8,
+            "items": [
+              {
+                "displayName": "Brunch",
+                "displayValue": "Brunch"
+              },
+              {
+                "displayName": "Dinner",
+                "displayValue": "Dinner"
+              }
+            ]
+          }
+        ]
+      },
+      "bestPhoto": {
+        "id": "5db9db65fa06e10008a9e6c4",
+        "createdAt": 1572461413,
+        "source": {
+          "name": "Swarm for iOS",
+          "url": "https://www.swarmapp.com"
+        },
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/77182479_BLUvlCvvRkrDEa5OWtcceib0TCqJtG27euDmlRBgv3k.jpg",
+        "width": 1440,
+        "height": 1920,
+        "visibility": "public"
+      },
+      "colors": {
+        "highlightColor": {
+          "photoId": "5db9db65fa06e10008a9e6c4",
+          "value": -3610432
+        },
+        "highlightTextColor": {
+          "photoId": "5db9db65fa06e10008a9e6c4",
+          "value": -16777216
+        },
+        "algoVersion": 3
+      }
+    }
+  }
+}

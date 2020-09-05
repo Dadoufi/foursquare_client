@@ -1,4 +1,4 @@
-package com.dadoufi.foursquare_client
+package testshared
 
 import com.dadoufi.foursquare_client.data.model.*
 
@@ -10,9 +10,15 @@ object SharedTestData {
             true,
             mutableListOf(
                 VenuesItem(
-                    name = "Cool venue",
-                    location = Location(mutableListOf("address1", "address2", "address3")),
-                    id = "id1"
+                    name = "New York Pizza",
+                    location = Location(
+                        mutableListOf(
+                            "Damstraat 24",
+                            "1012 JM Amsterdam",
+                            "Nederland"
+                        )
+                    ),
+                    id = "4a27db7bf964a52016941fe3"
                 ),
                 VenuesItem(
                     name = "Cooler venue",
@@ -23,44 +29,35 @@ object SharedTestData {
         )
     )
 
-    val venueFailedSearchResponseTestData = VenueSearchResponse(
-        meta = Meta(400, "someId"),
-        response = Response(false, mutableListOf())
-    )
-
     val venueDetailResponseTestData = VenueDetailResponse(
         meta = Meta(200, "someId"),
         response = DetailResponse(
             Venue(
-                id = "id1",
-                name = "Cool Venue",
-                rating = 5.5,
-                description = "cool description",
-                photos = Photos(1, mutableListOf()),
+                id = "4a27db7bf964a52016941fe3",
+                name = "New York Pizza",
+                rating = 6.6,
+                description = "New York Pizza is al sinds de oprichting in 1993 dé smaakmaker van Nederland",
                 contact = Contact(
-                    twitter = "twitterName",
-                    phone = "+3164273212",
-                    formattedPhone = "+31 64 273 212",
-                    facebook = "45354345",
-                    facebookName = "cool_venue",
-                    facebookUsername = "cool_venue",
-                    instagram = "cool_venue"
+                    twitter = "new_york_pizza",
+                    formattedPhone = "+31 20 422 2123",
+                    instagram = "newyorkpizza_nl"
                 ),
-                location = Location(mutableListOf("address1", "address2", "address3")),
+                location = Location(
+                    mutableListOf(
+                        "Damstraat 24",
+                        "1012 JM Amsterdam",
+                        "Nederland"
+                    )
+                ),
                 bestPhoto = BestPhoto(
-                    id = "234234",
-                    prefix = "prefix",
-                    suffix = "suffix",
-                    width = 720,
-                    height = 460
+                    id = "5db9db65fa06e10008a9e6c4",
+                    prefix = "https://fastly.4sqi.net/img/general/",
+                    suffix = "/77182479_BLUvlCvvRkrDEa5OWtcceib0TCqJtG27euDmlRBgv3k.jpg",
+                    width = 1440,
+                    height = 1920
                 )
             )
         )
     )
-
-//    val venueFailedDetailResponseTestData = VenueDetailResponse(
-//        meta = Meta(400, "someId"),
-//        response = DetailResponse()
-//    )
 
 }

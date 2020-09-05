@@ -20,9 +20,6 @@ data class Venue(
 	@field:SerializedName("description")
 	val description: String?,
 
-	@field:SerializedName("photos")
-	val photos: Photos,
-
 	@field:SerializedName("contact")
 	val contact: Contact,
 

@@ -1,0 +1,665 @@
+{
+  "meta": {
+    "code": 200,
+    "requestId": "5f537e1b26418f2e9e716034"
+  },
+  "response": {
+    "venues": [
+      {
+        "id": "4a27db7bf964a52016941fe3",
+        "name": "New York Pizza",
+        "contact": {},
+        "location": {
+          "address": "Damstraat 24",
+          "lat": 52.3721766271115,
+          "lng": 4.894925398813328,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": 52.3721766271115,
+              "lng": 4.894925398813328
+            }
+          ],
+          "postalCode": "1012 JM",
+          "cc": "NL",
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "country": "Nederland",
+          "formattedAddress": [
+            "Damstraat 24",
+            "1012 JM Amsterdam",
+            "Nederland"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d1ca941735",
+            "name": "Pizza Place",
+            "pluralName": "Pizza Places",
+            "shortName": "Pizza",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/pizza_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "verified": true,
+        "stats": {
+          "tipCount": 0,
+          "usersCount": 0,
+          "checkinsCount": 0,
+          "visitsCount": 0
+        },
+        "beenHere": {
+          "count": 0,
+          "lastCheckinExpiredAt": 0,
+          "marked": false,
+          "unconfirmedCount": 0
+        },
+        "venuePage": {
+          "id": "554919369"
+        },
+        "hereNow": {
+          "count": 0,
+          "summary": "Nobody here",
+          "groups": []
+        },
+        "referralId": "v-1599307465",
+        "venueChains": [],
+        "hasPerk": false
+      },
+      {
+        "id": "4a27db7bf964a52015941fe3",
+        "name": "New York Pizza",
+        "contact": {},
+        "location": {
+          "address": "Spui 2",
+          "lat": 52.36905387156786,
+          "lng": 4.891783833434053,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": 52.36905387156786,
+              "lng": 4.891783833434053
+            }
+          ],
+          "postalCode": "1012 WZ",
+          "cc": "NL",
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "country": "Nederland",
+          "formattedAddress": [
+            "Spui 2",
+            "1012 WZ Amsterdam",
+            "Nederland"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d1ca941735",
+            "name": "Pizza Place",
+            "pluralName": "Pizza Places",
+            "shortName": "Pizza",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/pizza_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "verified": true,
+        "stats": {
+          "tipCount": 0,
+          "usersCount": 0,
+          "checkinsCount": 0,
+          "visitsCount": 0
+        },
+        "beenHere": {
+          "count": 0,
+          "lastCheckinExpiredAt": 0,
+          "marked": false,
+          "unconfirmedCount": 0
+        },
+        "venuePage": {
+          "id": "553422568"
+        },
+        "hereNow": {
+          "count": 0,
+          "summary": "Nobody here",
+          "groups": []
+        },
+        "referralId": "v-1599307465",
+        "venueChains": [],
+        "hasPerk": false
+      },
+      {
+        "id": "4a27db7cf964a52018941fe3",
+        "name": "New York Pizza",
+        "contact": {},
+        "location": {
+          "address": "Stationsplein 13",
+          "crossStreet": "Stationsplein 13",
+          "lat": 52.37913684,
+          "lng": 4.90050656,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": 52.37913684,
+              "lng": 4.90050656
+            }
+          ],
+          "postalCode": "1012 AB",
+          "cc": "NL",
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "country": "Nederland",
+          "formattedAddress": [
+            "Stationsplein 13 (Stationsplein 13)",
+            "1012 AB Amsterdam",
+            "Nederland"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d1ca941735",
+            "name": "Pizza Place",
+            "pluralName": "Pizza Places",
+            "shortName": "Pizza",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/pizza_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "verified": true,
+        "stats": {
+          "tipCount": 0,
+          "usersCount": 0,
+          "checkinsCount": 0,
+          "visitsCount": 0
+        },
+        "beenHere": {
+          "count": 0,
+          "lastCheckinExpiredAt": 0,
+          "marked": false,
+          "unconfirmedCount": 0
+        },
+        "venuePage": {
+          "id": "552934671"
+        },
+        "hereNow": {
+          "count": 0,
+          "summary": "Nobody here",
+          "groups": []
+        },
+        "referralId": "v-1599307465",
+        "venueChains": [],
+        "hasPerk": false
+      },
+      {
+        "id": "5b31b80df5e9d7002ca5e4c9",
+        "name": "New York Pizza",
+        "contact": {},
+        "location": {
+          "address": "Lange Niezel 4",
+          "lat": 52.37513524,
+          "lng": 4.89821774,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": 52.37513524,
+              "lng": 4.89821774
+            }
+          ],
+          "postalCode": "1012 GT",
+          "cc": "NL",
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "country": "Nederland",
+          "formattedAddress": [
+            "Lange Niezel 4",
+            "1012 GT Amsterdam",
+            "Nederland"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d1ca941735",
+            "name": "Pizza Place",
+            "pluralName": "Pizza Places",
+            "shortName": "Pizza",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/pizza_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "verified": true,
+        "stats": {
+          "tipCount": 0,
+          "usersCount": 0,
+          "checkinsCount": 0,
+          "visitsCount": 0
+        },
+        "beenHere": {
+          "count": 0,
+          "lastCheckinExpiredAt": 0,
+          "marked": false,
+          "unconfirmedCount": 0
+        },
+        "venuePage": {
+          "id": "556229682"
+        },
+        "hereNow": {
+          "count": 0,
+          "summary": "Nobody here",
+          "groups": []
+        },
+        "referralId": "v-1599307465",
+        "venueChains": [],
+        "hasPerk": false
+      },
+      {
+        "id": "53692651498e10fc87b8bcc6",
+        "name": "Domino's Pizza",
+        "contact": {},
+        "location": {
+          "address": "Lange Niezel 20",
+          "crossStreet": "Oudezijds Voorburgwal",
+          "lat": 52.37495001179519,
+          "lng": 4.89877617405811,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": 52.37495001179519,
+              "lng": 4.89877617405811
+            }
+          ],
+          "postalCode": "1012 GT",
+          "cc": "NL",
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "country": "Nederland",
+          "formattedAddress": [
+            "Lange Niezel 20 (Oudezijds Voorburgwal)",
+            "1012 GT Amsterdam",
+            "Nederland"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d1ca941735",
+            "name": "Pizza Place",
+            "pluralName": "Pizza Places",
+            "shortName": "Pizza",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/pizza_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "verified": false,
+        "stats": {
+          "tipCount": 0,
+          "usersCount": 0,
+          "checkinsCount": 0,
+          "visitsCount": 0
+        },
+        "beenHere": {
+          "count": 0,
+          "lastCheckinExpiredAt": 0,
+          "marked": false,
+          "unconfirmedCount": 0
+        },
+        "hereNow": {
+          "count": 0,
+          "summary": "Nobody here",
+          "groups": []
+        },
+        "referralId": "v-1599307465",
+        "venueChains": [],
+        "hasPerk": false
+      },
+      {
+        "id": "4a27db7cf964a52019941fe3",
+        "name": "New York Pizza",
+        "contact": {},
+        "location": {
+          "address": "Reguliersbreestraat 51",
+          "crossStreet": "Rembrandtplein",
+          "lat": 52.36630852320901,
+          "lng": 4.89575190447247,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": 52.36630852320901,
+              "lng": 4.89575190447247
+            }
+          ],
+          "postalCode": "1017 CM",
+          "cc": "NL",
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "country": "Nederland",
+          "formattedAddress": [
+            "Reguliersbreestraat 51 (Rembrandtplein)",
+            "1017 CM Amsterdam",
+            "Nederland"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d1ca941735",
+            "name": "Pizza Place",
+            "pluralName": "Pizza Places",
+            "shortName": "Pizza",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/pizza_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "verified": true,
+        "stats": {
+          "tipCount": 0,
+          "usersCount": 0,
+          "checkinsCount": 0,
+          "visitsCount": 0
+        },
+        "beenHere": {
+          "count": 0,
+          "lastCheckinExpiredAt": 0,
+          "marked": false,
+          "unconfirmedCount": 0
+        },
+        "venuePage": {
+          "id": "557169802"
+        },
+        "hereNow": {
+          "count": 0,
+          "summary": "Nobody here",
+          "groups": []
+        },
+        "referralId": "v-1599307465",
+        "venueChains": [],
+        "hasPerk": false
+      },
+      {
+        "id": "5d7ce2ddd133420008ce4bb8",
+        "name": "Domino's Pizza Amsterdam Haarlemmerdijk",
+        "contact": {},
+        "location": {
+          "address": "Haarlemmerdijk 174",
+          "lat": 52.384123405990366,
+          "lng": 4.8849012043400535,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": 52.384123405990366,
+              "lng": 4.8849012043400535
+            }
+          ],
+          "postalCode": "1013 JE",
+          "cc": "NL",
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "country": "Nederland",
+          "formattedAddress": [
+            "Haarlemmerdijk 174",
+            "1013 JE Amsterdam",
+            "Nederland"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d1ca941735",
+            "name": "Pizza Place",
+            "pluralName": "Pizza Places",
+            "shortName": "Pizza",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/pizza_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "verified": false,
+        "stats": {
+          "tipCount": 0,
+          "usersCount": 0,
+          "checkinsCount": 0,
+          "visitsCount": 0
+        },
+        "beenHere": {
+          "count": 0,
+          "lastCheckinExpiredAt": 0,
+          "marked": false,
+          "unconfirmedCount": 0
+        },
+        "hereNow": {
+          "count": 0,
+          "summary": "Nobody here",
+          "groups": []
+        },
+        "referralId": "v-1599307465",
+        "venueChains": [],
+        "hasPerk": false
+      },
+      {
+        "id": "5336ea33498e0357be7223ca",
+        "name": "Cafe Pizza Pasta Restaurant",
+        "contact": {},
+        "location": {
+          "lat": 52.362217,
+          "lng": 4.886014,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": 52.362217,
+              "lng": 4.886014
+            }
+          ],
+          "cc": "NL",
+          "neighborhood": "Stadsdeel Centrum",
+          "country": "Nederland",
+          "formattedAddress": [
+            "Nederland"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d110941735",
+            "name": "Italian Restaurant",
+            "pluralName": "Italian Restaurants",
+            "shortName": "Italian",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/italian_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "verified": false,
+        "stats": {
+          "tipCount": 0,
+          "usersCount": 0,
+          "checkinsCount": 0,
+          "visitsCount": 0
+        },
+        "beenHere": {
+          "count": 0,
+          "lastCheckinExpiredAt": 0,
+          "marked": false,
+          "unconfirmedCount": 0
+        },
+        "hereNow": {
+          "count": 0,
+          "summary": "Nobody here",
+          "groups": []
+        },
+        "referralId": "v-1599307465",
+        "venueChains": [],
+        "hasPerk": false
+      },
+      {
+        "id": "4a270872f964a520be901fe3",
+        "name": "Pizza Pino",
+        "contact": {},
+        "location": {
+          "address": "Lange Leidsedwarsstraat 106",
+          "lat": 52.36404421094228,
+          "lng": 4.884506711438102,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": 52.36404421094228,
+              "lng": 4.884506711438102
+            }
+          ],
+          "postalCode": "1017 NN",
+          "cc": "NL",
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "country": "Nederland",
+          "formattedAddress": [
+            "Lange Leidsedwarsstraat 106",
+            "1017 NN Amsterdam",
+            "Nederland"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d1ca941735",
+            "name": "Pizza Place",
+            "pluralName": "Pizza Places",
+            "shortName": "Pizza",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/pizza_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "verified": false,
+        "stats": {
+          "tipCount": 0,
+          "usersCount": 0,
+          "checkinsCount": 0,
+          "visitsCount": 0
+        },
+        "beenHere": {
+          "count": 0,
+          "lastCheckinExpiredAt": 0,
+          "marked": false,
+          "unconfirmedCount": 0
+        },
+        "hereNow": {
+          "count": 0,
+          "summary": "Nobody here",
+          "groups": []
+        },
+        "referralId": "v-1599307465",
+        "venueChains": [],
+        "hasPerk": false
+      },
+      {
+        "id": "574dae59498eaa071efeaba8",
+        "name": "Pizza Bar Loulou",
+        "contact": {},
+        "location": {
+          "address": "Weesperzijde 42 a",
+          "lat": 52.355826207122846,
+          "lng": 4.907393740755977,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": 52.355826207122846,
+              "lng": 4.907393740755977
+            }
+          ],
+          "postalCode": "1091 EE",
+          "cc": "NL",
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "country": "Nederland",
+          "formattedAddress": [
+            "Weesperzijde 42 a",
+            "1091 EE Amsterdam",
+            "Nederland"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d1ca941735",
+            "name": "Pizza Place",
+            "pluralName": "Pizza Places",
+            "shortName": "Pizza",
+            "icon": {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/pizza_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "verified": false,
+        "stats": {
+          "tipCount": 0,
+          "usersCount": 0,
+          "checkinsCount": 0,
+          "visitsCount": 0
+        },
+        "beenHere": {
+          "count": 0,
+          "lastCheckinExpiredAt": 0,
+          "marked": false,
+          "unconfirmedCount": 0
+        },
+        "hereNow": {
+          "count": 0,
+          "summary": "Nobody here",
+          "groups": []
+        },
+        "referralId": "v-1599307465",
+        "venueChains": [],
+        "hasPerk": false
+      }
+    ],
+    "geocode": {
+      "what": "",
+      "where": "amsterdam",
+      "feature": {
+        "cc": "NL",
+        "name": "Amsterdam",
+        "displayName": "Amsterdam, Netherlands",
+        "matchedName": "Amsterdam, Netherlands",
+        "highlightedName": "<b>Amsterdam</b>, Netherlands",
+        "woeType": 7,
+        "slug": "amsterdam-netherlands",
+        "id": "geonameid:2759794",
+        "longId": "72057594040687730",
+        "geometry": {
+          "center": {
+            "lat": 52.37403,
+            "lng": 4.88969
+          },
+          "bounds": {
+            "ne": {
+              "lat": 52.52059199271734,
+              "lng": 5.068538969271151
+            },
+            "sw": {
+              "lat": 52.278108009531344,
+              "lng": 4.672476002255692
+            }
+          }
+        }
+      },
+      "parents": []
+    }
+  }
+}

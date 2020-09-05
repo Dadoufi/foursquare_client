@@ -6,26 +6,18 @@ import java.util.*
 data class Contact(
 
 	@field:SerializedName("twitter")
-	val twitter: String,
-
-	@field:SerializedName("phone")
-	val phone: String,
+	val twitter: String? = null,
 
 	@field:SerializedName("facebookUsername")
-	val facebookUsername: String,
-
-	@field:SerializedName("facebook")
-	val facebook: String,
+	val facebookUsername: String? = null,
 
 	@field:SerializedName("formattedPhone")
-	val formattedPhone: String,
+	val formattedPhone: String? = null,
 
 	@field:SerializedName("instagram")
-	val instagram: String,
+	val instagram: String? = null,
 
-	@field:SerializedName("facebookName")
-	val facebookName: String? = null
-)
+	)
 
 enum class SocialType {
 	FACEBOOK,
