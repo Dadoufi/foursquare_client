@@ -9,7 +9,7 @@ data class VenueDetailsEntity(
     @PrimaryKey
     val venueId: String,
     val title: String,
-    val description: String,
+    val description: String?,
     val address: List<String>,
     val contactInfo: Contact,
     val rating: Double,

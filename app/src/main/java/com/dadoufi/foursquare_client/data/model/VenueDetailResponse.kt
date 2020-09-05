@@ -67,15 +67,15 @@ data class BestPhoto(
 
 fun Venue.asVenueDetailsEntity(): VenueDetailsEntity =
 	VenueDetailsEntity(
-		venueId = id,
-		title = name,
-		description = description ?: "",
-		address = location.formattedAddress,
-		contactInfo = contact,
-		rating = rating,
-		image = bestPhoto.createUrl()
+        venueId = id,
+        title = name,
+        description = description,
+        address = location.formattedAddress,
+        contactInfo = contact,
+        rating = rating,
+        image = bestPhoto.createUrl()
 
-	)
+    )
 
 fun BestPhoto?.createUrl(): String? {
 	this?.let {
