@@ -13,7 +13,7 @@ interface VenuesDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun storeVenues(venues: List<VenuesEntity>)
 
-    @Query("DELETE FROM venues WHERE 'query' = :query ")
+    @Query("DELETE FROM venues WHERE `query` = :query")
     suspend fun deleteVenuesForQuery(query: String)
 
     @Transaction
