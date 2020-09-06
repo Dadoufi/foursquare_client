@@ -21,7 +21,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.dadoufi.foursquare_client.AppTestRunner"
 
         javaCompileOptions {
             annotationProcessorOptions {
@@ -56,11 +56,18 @@ android {
             includeAndroidResources = true
             returnDefaultValues = true
         }
+        animationsDisabled = true
     }
 
     sourceSets {
-        androidTest { java.srcDirs += "src/sharedTest/java" }
-        test { java.srcDirs += "src/sharedTest/java" }
+        androidTest {
+            java.srcDirs += "src/sharedTest/java"
+            resources.srcDirs += "src/sharedTest/resources"
+        }
+        test {
+            java.srcDirs += "src/sharedTest/java"
+            resources.srcDirs += "src/sharedTest/resources"
+        }
     }
     packagingOptions {
         exclude 'META-INF/DEPENDENCIES'
@@ -178,6 +185,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-idling-resource:3.3.0'
     androidTestImplementation 'com.agoda.kakao:kakao:2.3.4'
     androidTestImplementation 'com.kaspersky.android-components:kaspresso:1.1.0'
-    androidTestImplementation 'com.squareup.rx.idler:rx2-idler:0.11.0'
 
 }

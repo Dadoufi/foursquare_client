@@ -24,7 +24,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"
-                app:queryHint="Search for venues..." />
+                app:iconifiedByDefault="false"
+                app:queryHint="@string/search_hint" />
 
         </com.google.android.material.card.MaterialCardView>
 

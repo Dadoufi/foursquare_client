@@ -9,4 +9,5 @@
     <string name="instagram_url"><![CDATA[<a href=\"https://www.instagram.com/%1$s\"> %1$s </a>]]></string>
     <string name="facebook_url"><a href="https://www.facebook.com/">cake</a></string>
     <string name="twitter_url"><![CDATA[<a href=\"https://www.twitter.com/%1$s\"> %1$s </a>]]></string>
+    <string name="search_hint">Search for venues...</string>
 </resources>

@@ -8,7 +8,6 @@ import com.dadoufi.foursquare_client.data.remote.WebService
 import com.dadoufi.foursquare_client.utils.AppCoroutineDispatchers
 import com.dadoufi.foursquare_client.utils.ConnectivityStateManager
 import com.dadoufi.foursquare_client.utils.ConnectivityStateManagerImpl
-import com.dadoufi.foursquare_client.utils.Constants.BASE_URL
 import com.dadoufi.foursquare_client.utils.Constants.DATABASE_NAME
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -57,11 +56,12 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit = Retrofit.Builder()
-        .client(okHttpClient)
-        .baseUrl(BASE_URL)
-        .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
-        .build()
+    fun provideRetrofit(okHttpClient: OkHttpClient, @BaseUrl baseUrl: String): Retrofit =
+        Retrofit.Builder()
+            .client(okHttpClient)
+            .baseUrl(baseUrl)
+            .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
+            .build()
 
     @Singleton
     @Provides

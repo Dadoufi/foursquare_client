@@ -45,7 +45,7 @@ class NetworkDataSourceTest : ApiMocker<WebService>() {
     @Throws(IOException::class)
     @Test
     fun `fetch venues details from network test`(): Unit = runBlocking {
-        enqueueResponse("/venueDetails.json")
+        enqueueResponse("/venue_details.json")
         val response = service.getVenueDetails(venueId = "4a27db7bf964a52016941fe3")
         mockWebServer.takeRequest()
 
