@@ -6,6 +6,7 @@ import androidx.lifecycle.*
 import com.dadoufi.foursquare_client.core.ResultWrapper
 import com.dadoufi.foursquare_client.data.repositories.VenuesRepository
 import com.dadoufi.foursquare_client.utils.AppCoroutineDispatchers
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.collect
@@ -25,7 +26,7 @@ class SearchViewModel @ViewModelInject constructor(
 
     val viewState: LiveData<SearchViewState> =
         searchQuery.distinctUntilChanged().switchMap { query ->
-            liveData(viewModelScope.coroutineContext + dispatchers.io) {
+            liveData(viewModelScope.coroutineContext + Dispatchers.IO) {
                 if (query.isNullOrEmpty()) {
                     emit(SearchViewState.VenuesLoaded())
                 } else {
@@ -44,7 +45,7 @@ class SearchViewModel @ViewModelInject constructor(
         }
 
     fun setQuery(query: String) {
-        savedStateHandle.set("query", query)
+        // savedStateHandle.set("query", query)
         searchQuery.value = query
     }
 

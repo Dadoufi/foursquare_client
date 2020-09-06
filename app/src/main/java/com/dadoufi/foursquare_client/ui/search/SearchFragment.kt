@@ -32,29 +32,30 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
         super.onViewCreated(view, savedInstanceState)
 
         binding = FragmentSearchBinding.bind(view)
-        binding.recyclerView.run {
-            searchController.callbacks = object : SearchController.Callbacks {
-                override fun onItemClicked(item: VenuesEntity) {
-                    findNavController().navigate(
-                        SearchFragmentDirections.actionMainFragmentToDetailFragment(item.venueId)
-                    )
-                }
-            }
-            setController(searchController)
-        }
         binding.run {
+
             Insetter.builder().setOnApplyInsetsListener { _, insets, _ ->
-                searchAppbar.setMarginTop(insets.systemWindowInsetTop)
+                searchAppbar.setMarginTop(insets.systemWindowInsetTop.times(1.5).toInt())
+            }.applyToView(this.root)
+
+            recyclerView.run {
+                searchController.callbacks = object : SearchController.Callbacks {
+                    override fun onItemClicked(item: VenuesEntity) {
+                        findNavController().navigate(
+                            SearchFragmentDirections.actionMainFragmentToDetailFragment(item.venueId)
+                        )
+                    }
+                }
+                setController(searchController)
+            }
+
+            searchView.onQueryTextChanged {
+                viewModel.setQuery(it)
             }
         }
 
         viewModel.viewState.observeK(requireActivity()) {
             searchController.setData(it)
-        }
-
-
-        binding.searchView.onQueryTextChanged {
-            viewModel.setQuery(it)
         }
 
     }

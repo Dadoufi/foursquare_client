@@ -9,6 +9,9 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
+import androidx.core.view.marginBottom
+import androidx.core.view.marginLeft
+import androidx.core.view.marginRight
 import androidx.fragment.app.Fragment
 
 inline fun SearchView.onQueryTextChanged(crossinline onQueryTextChanged: (String) -> Unit) {
@@ -19,10 +22,14 @@ inline fun SearchView.onQueryTextChanged(crossinline onQueryTextChanged: (String
         }
 
         override fun onQueryTextChange(newText: String?): Boolean {
+            if (newText.isNullOrEmpty()) {
+                onQueryTextChanged("")
+            }
             return false
         }
     })
 }
+
 
 fun View.show() {
     visibility = View.VISIBLE
@@ -34,7 +41,7 @@ fun View.hide() {
 
 fun View.setMarginTop(marginTop: Int) {
     val menuLayoutParams = this.layoutParams as ViewGroup.MarginLayoutParams
-    menuLayoutParams.setMargins(0, marginTop, 0, 0)
+    menuLayoutParams.setMargins(marginLeft, marginTop, marginRight, marginBottom)
     this.layoutParams = menuLayoutParams
 }
 

@@ -2,7 +2,6 @@ package com.dadoufi.foursquare_client.ui.detail
 
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
-import android.util.TypedValue
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -31,15 +30,12 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         binding = FragmentDetailBinding.bind(view)
         binding.facebook.movementMethod = LinkMovementMethod.getInstance()
         binding.run {
-            val tv = TypedValue()
-            if (requireActivity().theme.resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
-                TypedValue.complexToDimensionPixelSize(tv.data, resources.displayMetrics)
-                Insetter.builder().setOnApplyInsetsListener { view, insets, initialState ->
+                Insetter.builder().setOnApplyInsetsListener { view, insets, _ ->
                     toolbar.setMarginTop(insets.systemWindowInsetTop)
                     statusBarGradientView.minimumHeight =
                         insets.systemWindowInsetTop
                 }.applyToView(this.root)
-            }
+
         }
 
         viewModel.viewState.observeK(this) {
@@ -48,3 +44,4 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
     }
 
 }
+
