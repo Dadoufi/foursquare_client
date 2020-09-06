@@ -23,7 +23,7 @@ import org.junit.Test
 @FlowPreview
 @HiltAndroidTest
 @UninstallModules(BaseUrlModule::class)
-class SearchVenues : TestCase() {
+class SearchVenuesTest : TestCase() {
 
     @get:Rule
     val activityScenarioRule = lazyActivityScenarioRule<MainActivity>(launchActivity = false)
@@ -68,6 +68,11 @@ class SearchVenues : TestCase() {
                         )
                     }
                 }
+            }
+        }
+        step("Scroll to bottom") {
+            SearchScreen {
+                recycler.scrollToEnd()
             }
         }
     }

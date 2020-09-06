@@ -10,4 +10,5 @@
     <string name="facebook_url"><a href="https://www.facebook.com/">cake</a></string>
     <string name="twitter_url"><![CDATA[<a href=\"https://www.twitter.com/%1$s\"> %1$s </a>]]></string>
     <string name="search_hint">Search for venues...</string>
+    <string name="pizza_search_request_url"><![CDATA[http://localhost:8080/venues/search?near=Amsterdam&radius=1000&limit=10&query=pizza&client_id=DWU21SJWIILG5JSWJCRVPYVJQTT4LGGI44BKN3GVSUPTPQGJ&client_secret=525VCSB2ZWO3G0XYODUZP4BHDFBYJ12Q2B5NSNPPRBXFNIS1&v=20120609]]></string>
 </resources>

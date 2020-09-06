@@ -23,7 +23,7 @@ class SearchViewActionExtension {
                 }
 
                 override fun perform(uiController: UiController, view: View) {
-                    (view as SearchView).setQuery(text, true) //submit=true will fire search
+                    (view as SearchView).setQuery(text, true)
                 }
             }
         }

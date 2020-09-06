@@ -1,5 +1,6 @@
 package com.dadoufi.foursquare_client.mockwebserver
 
+import com.dadoufi.foursquare_client.mockwebserver.MockFiles.VENUE_DETAILS_SUCCESS
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.RecordedRequest
@@ -7,10 +8,11 @@ import okio.buffer
 import okio.source
 import java.nio.charset.StandardCharsets
 
+
 class SuccessDispatcher : Dispatcher() {
     private val responseFilesByPath: Map<String, String> = mapOf(
         APIPaths.PIZZA_SEARCH to MockFiles.PIZZA_SEARCH_SUCCESS,
-        APIPaths.VENUE_DETAILS to ""
+        APIPaths.VENUE_DETAILS to VENUE_DETAILS_SUCCESS
     )
 
     override fun dispatch(request: RecordedRequest): MockResponse {
