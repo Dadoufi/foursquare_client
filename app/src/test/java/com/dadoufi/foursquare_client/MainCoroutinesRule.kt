@@ -13,7 +13,8 @@ import org.junit.runner.Description
 class MainCoroutinesRule(val dispatcher: TestCoroutineDispatcher = TestCoroutineDispatcher()) :
   TestWatcher(),
   TestCoroutineScope by TestCoroutineScope(dispatcher) {
-  override fun starting(description: Description?) {
+
+    override fun starting(description: Description?) {
     super.starting(description)
     // If your codebase allows the injection of other dispatchers like
     // Dispatchers.Default and Dispatchers.IO, consider injecting all of them here

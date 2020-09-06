@@ -46,6 +46,7 @@ class SearchController @Inject constructor() :
             is SearchViewState.VenuesLoadedError -> {
                 error {
                     id("error")
+                    errorMessage(viewState.message)
                 }
             }
             is SearchViewState.Loading -> {

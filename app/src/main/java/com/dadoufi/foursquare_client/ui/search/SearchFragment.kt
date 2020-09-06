@@ -43,7 +43,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
             setController(searchController)
         }
         binding.run {
-            Insetter.builder().setOnApplyInsetsListener { view, insets, initialState ->
+            Insetter.builder().setOnApplyInsetsListener { _, insets, _ ->
                 searchAppbar.setMarginTop(insets.systemWindowInsetTop)
             }
         }
@@ -60,7 +60,8 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
-        outState.putString("query", binding.searchView.query.toString())
+        super.onSaveInstanceState(outState)
+        viewModel.setQuery(binding.searchView.query.toString())
     }
 
 }
