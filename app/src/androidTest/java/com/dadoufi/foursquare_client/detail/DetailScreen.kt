@@ -11,7 +11,6 @@ object DetailScreen : KScreen<DetailScreen>() {
     override val layoutId: Int? = R.layout.fragment_detail
     override val viewClass: Class<*>? = DetailFragment::class.java
 
-
     val description: KTextView = KTextView {
         withId(R.id.description)
     }

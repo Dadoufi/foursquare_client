@@ -5,4 +5,9 @@
     <color name="primaryDarkColor">#62757f</color>
     <color name="primaryTextColor">#000000</color>
     <color name="transparentColor">#00000000</color>
+
+
+    <color name="backgroundColor">#1d2733</color>
+    <color name="itemColor">#272f43</color>
+    <color name="accentColor">#ab3c23</color>
 </resources>

@@ -6,7 +6,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/design_default_color_background"
         tools:context=".ui.search.SearchFragment">
 
 
@@ -17,6 +16,7 @@
             android:layout_margin="@dimen/margin_normal"
             app:cardCornerRadius="@dimen/margin_very_small"
             app:cardElevation="@dimen/margin_very_small"
+            app:cardBackgroundColor="@color/itemColor"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent">
